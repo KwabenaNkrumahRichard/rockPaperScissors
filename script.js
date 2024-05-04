@@ -17,6 +17,7 @@ function getComputerChoice (){
     return choice;
 }
 
+let playerScore = 0,computerScore = 0,draw =0;
 
 function playRound(playerSelection,computerSelection){
 
@@ -24,19 +25,19 @@ function playRound(playerSelection,computerSelection){
 
     if (playerSelection==computerSelection){
         
-        draw++;
+       return draw++;
     }
 
     else if(playerSelection =='rock' && computerSelection == 'scissors'
             || playerSelection=='scissors' && computerSelection == 'paper'
             || playerSelection == 'paper' && computerSelection =='rock'){
         
-        playerScore++;
+       return playerScore++;
     }
 
     else{
         
-        computerScore++;
+       return computerScore++;
     }
     
 }
@@ -50,9 +51,8 @@ function playGame(){
     playRound(playerSelection,computerSelection);
     }
 
-    console.log(`You won ${playerScore}\nYou draw ${draw}` );
+    console.log(`You won ${playerScore}\nYou draw ${draw}\n Computer won ${computerScore}` );
 }
 
-let playerScore = 0,computerScore = 0,draw =0;
 
 playGame();
